@@ -2354,6 +2354,9 @@ Footer Style
   padding-left: 40px;
 }
 @media (max-width: 702px) {
+	.footer{
+    margin-top: 20px;
+  }
   
   .footer-about .footer-widget i{
     color:white;
