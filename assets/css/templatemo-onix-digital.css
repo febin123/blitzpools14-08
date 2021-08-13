@@ -2353,7 +2353,9 @@ Footer Style
   padding-left: 40px;
 }
 @media (max-width: 702px) {
-
+.footer-about .icons1 i{
+    color: blue;
+  }
   .footer{
 	  margin-top:20px;
 	}
