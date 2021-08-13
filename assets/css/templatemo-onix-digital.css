@@ -2354,9 +2354,9 @@ Footer Style
 }
 @media (max-width: 702px) {
 
-  /* .footer{
+  .footer{
     margin-top: -50px;
-  } */
+  }
   .footer-widget h6{
       padding-top: 50px;
       padding-right: 50px;
