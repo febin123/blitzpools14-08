@@ -1706,7 +1706,26 @@ Banner Style
 }
 
 /*sticky button*/
-
+.back-to-top {
+  position: fixed;
+  bottom: 0px;
+  /* right: 575px; */
+  display: none;
+  width: 100vw;
+  height: 45px;
+  background: #282829;
+  line-height: 45px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #282829;
+}
+.back-to-top p{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fbad18;
+}
 .fixed-btn{
   position: fixed;
   background: #282829;
