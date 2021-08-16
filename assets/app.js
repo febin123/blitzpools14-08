@@ -26,23 +26,7 @@ window.addEventListener("scroll",function(){
     header.classList.bottom("sticky",window.scrollY>0)
 
 })
-// document.onclick=function(e){
-//   if(e.target.id !== 'hea' && e.target.id !== '.mainMenu' && e.target.id !== '.closeMenu' && e.target.id !== '.openMenu'){
-//     openMenu.classList.remove('active');
-//     closeMenu.classList.remove('active');
-//     mainMenu.classList.remove('active');
-//   }
-// }
 
-
-// openMenu.onclick=function(){
-//   openMenu.classList.openMenu('active');
-//   mainMenu.classList.openMenu('active');
-// }
-// closeMenu.onclick=function(){
-//   closeMenu.classList.closeMenu('active');
-//   mainMenu.classList.closeMenu('active');
-// }
 /*pop up*/
 
 document.getElementById("open-popup-btn").addEventListener("click",function(){
@@ -118,61 +102,22 @@ function easeInOutCubic(t, b, c, d) {
 /*Download now */
 
 
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 200) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+  });
 
-const backToTopButton1 = document.querySelector(".fixed-btn");
 
-window.addEventListener("scroll", scrollFunction1);
 
-function scrollFunction1() {
-  if (window.pageYOffset > 550) { // Show backToTopButton
-    if(!backToTopButton1.classList.contains("btnEntrance")) {
-      backToTopButton1.classList.remove("btnExit");
-      backToTopButton1.classList.add("btnEntrance");
-      backToTopButton1.style.display = "block";
-    }
-  }
-  else { // Hide backToTopButton
-    if(backToTopButton1.classList.contains("btnEntrance")) {
-      backToTopButton1.classList.remove("btnEntrance");
-      backToTopButton1.classList.add("btnExit");
-      setTimeout(function() {
-        backToTopButton1.style.display = "none";
-      }, 250);
-    }
-  }
-}
 
-backToTopButton1.addEventListener("click", smoothScrollBackToTop);
-
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
-
-function smoothScrollBackToTop() {
-  const targetPosition = 0;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 750;
-  let start = null;
   
-  window.requestAnimationFrame(step);
 
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-    if (progress < duration) window.requestAnimationFrame(step);
-  }
-}
 
-function easeInOutCubic(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2*t*t*t + b;
-	t -= 2;
-	return c/2*(t*t*t + 2) + b;
-};
-
-/*end of scroll up*/
 
 
 /*end of download now*/
